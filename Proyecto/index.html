@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Proyecto</title>
+</head>
+<body>
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <div class="container">
+    <div class="logo">
+      <img src="Imagenes/Logo.png" alt="logo" height="100">
+    </div>
+    <div class="inputContainers">
+      <div>
+        <div id="g_id_onload"
+             data-client_id="YOUR_GOOGLE_CLIENT_ID"
+             data-login_uri="https://your.domain/your_login_endpoint"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin prueba"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-shape="rectangular"
+             data-logo_alignment="left">
+        </div>
+        <p style="font-weight: bold">Or</p>
+      </div>
+
+      <div>
+        <label for="username" class="inputLabel">Username</label>
+        <input type="text" id="username" class="textbox" placeholder="">
+      </div>
+      <div>
+        <label for="password" class="inputLabel">Password</label>
+        <input type="password" id="password" class="textbox" placeholder="**********">
+      </div>
+      <div>
+        <p class="inputLabel">
+          Not a user? <a href="/Proyecto/Pagina2.html">Register Now</a>
+        </p>
+        <button type="button" class="buttonLogin">Login</button>
+      </div>
+    </div>
+    <div class="downinfo">
+      <hr style="width: 100%; margin-bottom: 2em">
+      <ul class="linksNav">
+        <li><a href="home.html">Home</a></li>
+        <li>|</li>
+        <li><a href="rides.html">Rides</a></li>
+        <li>|</li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li>|</li>
+        <li><a href="settings.html">Settings</a></li>
+        <li>|</li>
+        <li><a href="login.html">Login</a></li>
+        <li>|</li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+      <footer class="linksNav">
+        <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+

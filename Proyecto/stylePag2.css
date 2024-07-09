@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+  padding-top: 20px;
+}
+
+.registrbox {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.registrbox h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap; /* Los elementos se envuelven */
+  margin-bottom: 15px;
+}
+
+.group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.group input,
+.group select {
+  width: calc(
+    100% - 22px
+  ); /* Ancho del campo de entrada, restando padding y bordes */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.column {
+  flex: 1; /* Ocupa igual espacio que otros elementos con flex: 1 */
+  margin-right: 10px; /* Espacio a la derecha de cada columna */
+}
+
+.column:last-child {
+  margin-right: 0; /* Elimina el margen derecho */
+}
+
+.links {
+  display: flex;
+  justify-content: space-between; /* Espacio entre links */
+  margin-bottom: 20px; /* Espacio debajo de los links */
+}
+
+.links a {
+  text-decoration: none; /* quita el subrayado de los links */
+  color: #007bff; /* pone los links azules */
+  text-align: left;
+}
+
+.links a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar mouse */
+}
+
+.BtnSignUp {
+  border: 10px solid #999;
+  border-radius: 10px;
+  align-items: center;
+  left: 30%;
+  height: 45px;
+  width: 200px;
+  position: relative;
+}
+.downinfo {
+  display: flex;
+  align-items: center;
+  width: 99.9%;
+  position: absolute;
+  bottom: 0%;
+  color: #7e7e7e;
+  flex-direction: column;
+  background-color: #fff;
+  left: 0%;
+}
+.barNav {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.linksNav {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0.5%;
+}
+
+.linksNav li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.linksNav a {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.linksNav a:hover {
+  color: #007bff;
+}
+.BtnSignUp {
+  background-color: #555555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.Title1 {
+  text-align: center;
+}
+
+.header {
+  font-size: 36px;
+  color: #555;
+  margin: 0;
+}
+
+.line {
+  width: 50%;
+  margin: 10px auto;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
