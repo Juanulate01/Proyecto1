@@ -1,0 +1,259 @@
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.topBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  width: 100%;
+  align-items: stretch;
+}
+.topBtns button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #878787;
+}
+
+.topBtns input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.topBtns .profile-icon {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  background-image: url("Imagenes/persona.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+}
+.navBtn {
+  text-align: center;
+  min-width: 100px;
+  margin: 0% !important;
+}
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.profile-menu {
+  position: relative;
+}
+.profile-menu:hover .dropdown-menu {
+  display: block;
+}
+.topBtns .profile-icon {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  background-image: url("Imagenes/persona.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+
+.profile-menu:hover .dropdown-menu {
+  display: block;
+}
+header {
+  padding: 0%;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  width: 60%;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f4f4f4;
+}
+h1 {
+  margin-bottom: 10px;
+  display: block;
+  unicode-bidi: isolate;
+  color: #878787;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  margin-top: 5%;
+  text-align: center;
+}
+hr {
+  width: 30%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.registrbox {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.registrbox h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap; /* Los elementos se envuelven */
+  margin-bottom: 15px;
+}
+
+.group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.group input,
+.group select {
+  width: calc(
+    100% - 22px
+  ); /* Ancho del campo de entrada, restando padding y bordes */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.column {
+  flex: 1; /* Ocupa igual espacio que otros elementos con flex: 1 */
+  margin-right: 10px; /* Espacio a la derecha de cada columna */
+}
+
+.column:last-child {
+  margin-right: 0; /* Elimina el margen derecho */
+}
+.cancel-button,
+.create-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  width: 200px;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  margin-right: 10px;
+}
+
+.create-button {
+  background-color: #007bff;
+  color: #fff;
+}
+.btnGroup {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  margin-top: 6%;
+}
+.linksNav {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0.5%;
+}
+
+.linksNav li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.linksNav a {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.linksNav a:hover {
+  color: #007bff;
+}
+.downinfo {
+  display: flex;
+  align-items: center;
+  width: 99.9%;
+  position: absolute;
+  bottom: 0%;
+  color: #7e7e7e;
+  flex-direction: column;
+  background-color: #fff;
+}
+.downinfo p {
+  margin: 0%;
+  margin-bottom: 10px;
+}
+a {
+  color: #6c757d;
+  text-decoration: none;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="styleSearch.css">
+  </head>
+  <body>
+    <div class="container1">
+      <div class="logo">
+        <img src="Imagenes/Logo.png" alt="logo" height="100">
+      </div>
+      <header>
+        <div class="topBtns">
+          <div class="navContainer">
+            <button
+            type="button"
+            style="color: #ffffff; background-color: #007bff"
+            class="navBtn"
+          >
+            Home
+          </button>
+            <button type="button" class="navBtn">Rides</button>
+            <button type="button" class="navBtn">Bookings</button>
+          </div>
+          <nav>
+            <div class="search-bar">
+              <input type="text" placeholder="Search...">
+            </div>
+            <div class="profile-menu">
+              <button type="button" class="profile-icon"></button>
+              <div class="dropdown-menu">
+                <a href="#">Logout</a>
+                <a href="#">Settings</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div style="text-align: center">
+          <h1 class="header">Search rides</h1>
+          <hr class="line">
+        </div>
+        <div class="findSecction">
+          <div class="filterBox">
+            <div class="locationBox">
+              <div class="boxGroup">
+                <label for="from">From</label>
+                <select id="from">
+                  <option value="Quesada">Quesada</option>
+                </select>
+              </div>
+              <div class="boxGroup">
+                <label for="to">To</label>
+                <select id="to">
+                  <option value="Zarcero">Zarcero</option>
+                </select>
+              </div>
+            </div>
+            <div class="boxGroup days">
+              <label>Days</label>
+              <label><input type="checkbox" checked> Mon</label>
+              <label><input type="checkbox" checked> Tue</label>
+              <label><input type="checkbox" checked> Wed</label>
+              <label><input type="checkbox" checked> Thu</label>
+              <label><input type="checkbox" checked> Fri</label>
+              <label><input type="checkbox" checked> Sat</label>
+              <label><input type="checkbox" checked> Sun</label>
+            </div>
+          </div>
+          <button class="btnFindR">Find rides</button>
+        </div>
+        <div class="tblResult">
+          <div style="padding-bottom: 2%">
+            <label>Rides found from <span class="bold">Quesada</span> to <span class="bold">Zarcero</span></label>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Driver</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Seats</th>
+                <th>Car</th>
+                <th>Fee</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="/Proyecto/Imagenes/persona.png" alt="User Icon"> barroyo</td>
+                <td><a href="#">Quesada</a></td>
+                <td>Alajuela</td>
+                <td>2</td>
+                <td>Nissan Pathfinder 2015</td>
+                <td>$5</td>
+                <td><a href="#">Request</a></td>
+              </tr>
+              <tr>
+                <td><img src="/Proyecto/Imagenes/persona.png" alt="User Icon"> barroyo</td>
+                <td><a href="#">Quesada</a></td>
+                <td>Naranjo</td>
+                <td>1</td>
+                <td>Toyota Corolla 2020</td>
+                <td>$10</td>
+                <td><a href="#">Request</a></td>
+              </tr>
+              <tr>
+                <td><img src="/Proyecto/Imagenes/persona.png" alt="User Icon"> yluna</td>
+                <td><a href="#">Aguas Zarcas</a></td>
+                <td>Naranjo</td>
+                <td>1</td>
+                <td>Ford Festiva 1990</td>
+                <td>--</td>
+                <td><a href="#">Request</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="map">
+          <img src="/Proyecto/Imagenes/Map.png" alt="Map">
+        </div>
+      </main>
+    </div>
+    <div class="downinfo">
+      <hr style="width: 100%; margin-bottom: 2em">
+      <ul class="linksNav">
+        <li><a href="/Proyecto/searchRides.html">Home</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/myRides.html">Rides</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/bookings.html">Bookings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/editProf.html">Settings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/index.html">Login</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/userReg.html">Register</a></li>
+      </ul>
+      <footer class="linksNav">
+        <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,278 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 20px;
+  width: 60%;
+}
+h1 {
+  margin-bottom: 20px;
+  display: block;
+  unicode-bidi: isolate;
+  color: #878787;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  margin: 0%;
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+hr {
+  width: 17%;
+}
+header {
+  padding: 0%;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  width: 60%;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+
+.profile-menu:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f4f4f4;
+}
+.topBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  width: 100%;
+  align-items: stretch;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+}
+.topBtns .profile-icon {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  background-image: url("Imagenes/persona.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+.topBtns button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #878787;
+}
+
+.topBtns input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.navBtn {
+  text-align: center;
+  min-width: 100px;
+  margin: 0% !important;
+}
+.findSecction {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.filterBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.locationBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.boxGroup {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  align-items: center;
+}
+.boxGroup label {
+  margin-right: 10px;
+}
+.boxGroup select {
+  padding: 0% 5%;
+  height: 30px;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.days {
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.days label {
+  margin-right: 10px;
+}
+
+.btnFindR {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.tblResult h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+td:first-child {
+  /* primer td */
+  display: flex;
+  align-items: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+.linksNav {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0.5%;
+  background-color: #fff;
+}
+
+.linksNav li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.linksNav a {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.linksNav a:hover {
+  color: #007bff;
+}
+.downinfo {
+  display: flex;
+  align-items: center;
+  width: 99.9%;
+  position: sticky;
+  bottom: 0%;
+  color: #7e7e7e;
+  flex-direction: column;
+  background-color: #fff;
+}
+.downinfo p {
+  margin: 0%;
+  margin-bottom: 10px;
+}

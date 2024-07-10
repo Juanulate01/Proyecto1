@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="stylebookings.css">
+  </head>
+  <body>
+    <div class="container1">
+      <div class="logo">
+        <img src="Imagenes/Logo.png" alt="logo" height="100">
+      </div>
+      <header>
+        <div class="topBtns">
+          <div class="navContainer">
+            <button type="button" class="navBtn"><a href="/Proyecto/searchRides.html">Home</a></button>
+            <button type="button" class="navBtn"><a href="/Proyecto/myRides.html">Rides</a></button>
+            <button
+              type="button"
+              style="color: #ffffff; background-color: #007bff"
+              class="navBtn"
+            >
+              Bookings
+            </button>
+          </div>
+          <nav>
+            <div class="search-bar">
+              <input type="text" placeholder="Search...">
+            </div>
+            <div class="profile-menu">
+              <button type="button" class="profile-icon"></button>
+              <div class="dropdown-menu">
+                <a href="/Proyecto/index.html">Logout</a>
+                <a href="/Proyecto/editProf.html">Settings</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div style="width: 80%">
+          <h1 class="header">Bookings</h1>
+          <hr class="line">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Ride</th>
+                  <th>Accept / Reject</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="/Proyecto/Imagenes/persona.png" alt="User Icon">
+                    fulano
+                  </td>
+                  <td>Ciudad Quesada - Naranjo</td>
+                  <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/Proyecto/Imagenes/persona.png" alt="User Icon">
+                    yluna
+                  </td>
+                  <td>Fortuna - San José</td>
+                  <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="downinfo">
+      <hr style="width: 100%; margin-bottom: 2em">
+      <ul class="linksNav">
+        <li><a href="/Proyecto/searchRides.html">Home</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/myRides.html">Rides</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/bookings.html">Bookings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/editProf.html">Settings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/index.html">Login</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/userReg.html">Register</a></li>
+      </ul>
+      <footer class="linksNav">
+        <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

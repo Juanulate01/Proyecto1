@@ -54,6 +54,9 @@ body {
   color: white;
   margin-top: 2em;
 }
+.buttonLogin a{
+  color: white;
+}
 
 .inputContainers {
   width: 20%;
@@ -70,7 +73,7 @@ body {
 }
 .downinfo p {
   margin: 0%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .position {
   display: flex;
@@ -104,4 +107,10 @@ body {
 
 .linksNav a:hover {
   color: #007bff;
+}
+
+div label {
+  display: flex;
+  text-align: left;
+  margin: 5px;
 }

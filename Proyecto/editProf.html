@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="styleEditProf.css">
+  </head>
+  <body>
+    <div class="container1">
+      <div class="logo">
+        <img src="Imagenes/Logo.png" alt="logo" height="100">
+      </div>
+      <header>
+        <div class="topBtns">
+          <div class="navContainer">
+            <button
+              type="button"
+              style="color: #ffffff; background-color: #007bff"
+              class="navBtn"
+            >
+              Home
+            </button>
+            <button type="button" class="navBtn"><a href="/Proyecto/searchRides.html">Rides</a></button>
+            <button type="button" class="navBtn"><a href="/Proyecto/bookings.html">Bookings</a></button>
+          </div>
+          <nav>
+            <div class="search-bar">
+              <input type="text" placeholder="Search...">
+            </div>
+            <div class="profile-menu">
+              <button type="button" class="profile-icon"></button>
+              <div class="dropdown-menu">
+                <a href="/Proyecto/index.html">Logout</a>
+                <a href="/Proyecto/editProf.html">Settings</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div>
+          <h1 class="header">Edit Profile</h1>
+          <hr class="line">
+        </div>
+        <div class="registrbox">
+          <form action="#" method="post">
+            <div class="group">
+              <div class="column">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName"  placeholder="Bladimir" required>
+              </div>
+              <div class="column">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName"  placeholder="Arroyo" required>
+              </div>
+            </div>
+            <div class="group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Bladimir.ab@gmail.com" required>
+            </div>
+            <div class="group">
+              <div class="column">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+              </div>
+              <div class="column">
+                <label for="repeatPassword">Repeat Password</label>
+                <input type="password" id="repeatPassword" required>
+              </div>
+            </div>
+            <div class="group">
+              <label for="address">Address</label>
+              <input type="text" id="address"  placeholder="2km Norte">
+            </div>
+            <div class="group">
+              <div class="column">
+                <label for="country">Country</label>
+                <select id="country" required>
+                  <option value="">Select Country</option>
+                  <option value="cr">Costa Rica</option>
+                  <option value="us">United States</option>
+                  <option value="mx">Mexico</option>
+                </select>
+              </div>
+              <div class="column">
+                <label for="state">State</label>
+                <input type="text" id="state" placeholder="Alajuela">
+              </div>
+            </div>
+            <div class="group">
+              <div class="column">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Quesada">
+              </div>
+              <div class="column">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber">
+              </div>
+            </div>
+            <div class="btnGroup">
+              <button type="button" class="cancel-button">Cancel</button>
+              <button type="submit" class="create-button">Save</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <div class="downinfo">
+      <hr style="width: 100%; margin-bottom: 2em">
+      <ul class="linksNav">
+        <li><a href="/Proyecto/searchRides.html">Home</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/myRides.html">Rides</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/bookings.html">Bookings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/editProf.html">Settings</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/index.html">Login</a></li>
+        <li><a>|</a></li>
+        <li><a href="/Proyecto/userReg.html">Register</a></li>
+      </ul>
+      <footer class="linksNav">
+        <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
+
