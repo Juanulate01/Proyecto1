@@ -258,6 +258,7 @@ form {
   cursor: pointer;
   height: 40px;
   width: 200px;
+
 }
 
 .cancel-button {
@@ -283,7 +284,7 @@ form {
 }
 
 a {
-  color: #6c757d;
+  color: #6c757d;;
   text-decoration: none;
 }
 
