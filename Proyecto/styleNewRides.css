@@ -311,3 +311,6 @@ a {
   margin: 0%;
   margin-bottom: 10px;
 }
+div.btnGroup a{
+  color: white;
+}

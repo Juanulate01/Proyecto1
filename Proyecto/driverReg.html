@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styleUserReg.css">
+  <link rel="stylesheet" href="styleDrivReg.css">
   <title>Proyecto</title>
 </head>
 <body>
@@ -12,14 +12,14 @@
       <img src="Imagenes/Logo.png" alt="logo" height="100">
     </div>
     <div class="Title1">
-      <h1 class="header">User Registration</h1>
+      <h1 class="header">Driver Registration</h1>
       <hr class="line">
     </div>
     <div class="registrbox">
       <form id="registrationForm" action="#" method="post">
         <div class="group">
           <div class="column">
-            <label for="firstName">First Name</label>
+            <label for="firstName">First name</label>
             <input type="text" id="firstName" required>
           </div>
           <div class="column">
@@ -28,13 +28,14 @@
           </div>
         </div>
         <div class="group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
+          <label for="idNumber">ID Number</label>
+          <input type="text" id="idNumber" required>
         </div>
+
         <div class="group">
           <div class="column">
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
+            <label for="vehicleModel">Password</label>
+            <input type="text" id="Password" required>
           </div>
           <div class="column">
             <label for="repeatPassword">Repeat Password</label>
@@ -42,44 +43,50 @@
           </div>
         </div>
         <div class="group">
-          <label for="address">Address</label>
-          <input type="text" id="address">
-        </div>
-        <div class="group">
           <div class="column">
-            <label for="country">Country</label>
-            <select id="country" required>
-              <option value="">Select Country</option>
-              <option value="cr">Costa Rica</option>
-              <option value="us">United States</option>
-              <option value="br">Brazil</option>
-              <option value="es">España</option>
-            </select>
+            <label for="phoneNumber">Phone</label>
+            <input type="text" id="phoneNumber" required>
           </div>
           <div class="column">
-            <label for="state">State</label>
-            <input type="text" id="state">
+            <label for="dateBirth">Date of Birth</label>
+            <input type="date" id="dateBirth" required>
           </div>
         </div>
         <div class="group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="group">
           <div class="column">
-            <label for="city">City</label>
-            <input type="text" id="city">
+            <label for="vehicleMake">Vehicle Make</label>
+            <input type="text" id="vehicleMake" required>
           </div>
           <div class="column">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text" id="phoneNumber">
+            <label for="vehicleModel">Vehicle Model</label>
+            <input type="text" id="vehicleModel" required>
+          </div>
+        </div>
+        <div class="group">
+          <div class="column">
+            <label for="vehicleYear">Vehicle Year</label>
+            <input type="text" id="vehicleYear" required>
+          </div>
+          <div class="column">
+            <label for="plateNumber">ID Vehicle</label>
+            <input type="text" id="idVehicle" required>
           </div>
         </div>
         <div class="links">
           <p>Already a user? <a href="/Proyecto/index.html">Login here</a></p>
-          <p>Register as driver? <a href="/Proyecto/driverReg.html">Click here</a></p>
+          <p>Register as user? <a href="/Proyecto/newRides.html">Click here</a></p>
         </div>
-        <button id="signUpBtn" class="BtnSignUp">Sign up</button>
+        <div class="btn">
+        <button id="signUpBtn" class="BtnSignUp">Sign Up</button>
+      </div>
       </form>
     </div>
     <div class="downinfo">
-      <hr style="width: 100%; margin-bottom: 2em">
+      <hr>
       <ul class="linksNav">
         <li><a href="/Proyecto/searchRides.html">Home</a></li>
         <li><a>|</a></li>
@@ -98,6 +105,6 @@
       </footer>
     </div>
   </div>
-  <script src="/Proyecto/Javascripts/userReg.js"></script>
+  <script src="/Proyecto/Javascripts/driverReg.js"></script>
 </body>
 </html>

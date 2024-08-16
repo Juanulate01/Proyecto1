@@ -1,19 +1,24 @@
 document.getElementById('signUpBtn').addEventListener('click', function(event) {
   event.preventDefault();
 
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const repeatPassword = document.getElementById('repeatPassword').value;
-  const address = document.getElementById('address').value;
-  const country = document.getElementById('country').value;
-  const state = document.getElementById('state').value;
-  const city = document.getElementById('city').value;
-  const phoneNumber = document.getElementById('phoneNumber').value;
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const repeatPassword = document.getElementById('repeatPassword').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const country = document.getElementById('country').value.trim();
+  const state = document.getElementById('state').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const phoneNumber = document.getElementById('phoneNumber').value.trim();
+
+  if (!firstName || !lastName || !email || !password || !repeatPassword || !address || !country || !state || !city || !phoneNumber) {
+    alert('Por favor llene todos los campos');
+    return;
+  }
 
   if (password !== repeatPassword) {
-    alert('Passwords do not match');
+    alert('Las contraseñas no coinciden');
     return;
   }
 
@@ -26,7 +31,8 @@ document.getElementById('signUpBtn').addEventListener('click', function(event) {
     country,
     state,
     city,
-    phoneNumber
+    phoneNumber,
+    userType: 'pasajero' //Agrega el pasagero automaticamente
   };
 
   let users = JSON.parse(localStorage.getItem('users')) || [];

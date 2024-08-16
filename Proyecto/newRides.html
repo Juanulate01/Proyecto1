@@ -56,26 +56,26 @@
           </div>
           <label>Days</label>
           <div class="form-group days">
-            <label><input type="checkbox" value="Mon" checked> Mon</label>
-            <label><input type="checkbox" value="Tue" checked> Tue</label>
-            <label><input type="checkbox" value="Wed" checked> Wed</label>
-            <label><input type="checkbox" value="Thu" checked> Thu</label>
-            <label><input type="checkbox" value="Fri" checked> Fri</label>
-            <label><input type="checkbox" value="Sat" checked> Sat</label>
-            <label><input type="checkbox" value="Sun" checked> Sun</label>
+            <label><input type="checkbox" value="Mon" > Mon</label>
+            <label><input type="checkbox" value="Tue" > Tue</label>
+            <label><input type="checkbox" value="Wed" > Wed</label>
+            <label><input type="checkbox" value="Thu" > Thu</label>
+            <label><input type="checkbox" value="Fri" > Fri</label>
+            <label><input type="checkbox" value="Sat" > Sat</label>
+            <label><input type="checkbox" value="Sun" > Sun</label>
           </div>
           <div class="dateInfo">
             <div>
               <label for="time">Time</label>
-              <input type="time" id="time" value="10:00" required>
+              <input type="time" id="time" required>
             </div>
             <div>
               <label for="seats">Seats</label>
-              <input type="number" id="seats" value="2" required>
+              <input type="number" id="seats" min="1" required>
             </div>
             <div>
               <label for="fee">Fee</label>
-              <input type="number" id="fee" value="15" required>
+              <input type="number" id="fee" min="0" required>
             </div>
           </div>
           <div>
@@ -85,6 +85,12 @@
                 <label for="make">Make</label>
                 <select id="make">
                   <option>Nissan</option>
+                  <option>Toyota</option>
+                  <option>Honda</option>
+                  <option>BMW</option>
+                  <option>Audi</option>
+                  <option>Volkswagen</option>
+                  <option>Ford</option>
                 </select>
               </div>
               <div class="vehicle-group">
@@ -104,15 +110,14 @@
                 min="1900"
                 max="2025"
                 step="1"
-                value="2020"
                 required
                 >
               </div>
             </div>
           </div>
           <div class="btnGroup">
-            <button type="button" class="cancel-button"><a href="/Proyecto/searchRides.html">Cancel</a></li></button>
-            <button type="submit" class="create-button"><a href="/Proyecto/myRides.html">Create</a></button>
+            <button type="button" class="cancel-button" id="cancelBtn">Cancel</button>
+            <button type="submit" class="create-button" id="createBtn">Create</button>
           </div>
         </div>
       </main>
@@ -136,5 +141,6 @@
           <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
       </footer>
       </div>
+      <script src="/Proyecto/Javascripts/newRide.js"></script>
   </body>
 </html>
