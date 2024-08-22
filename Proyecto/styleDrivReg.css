@@ -87,8 +87,6 @@ body {
     border-radius: 4px;
 }
 
-
-
 .downinfo {
   display: flex;
   align-items: center;
@@ -156,5 +154,47 @@ body {
 .btn{
     justify-content: center;
     display: flex;
+}
+
+@media (max-width: 1024px) {
+  .registrbox {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .group {
+    flex-direction: column; 
+  }
+
+  .column {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+
+  .Title1 h1.header {
+    font-size: 28px;
+  }
+
+  .line {
+    width: 70%;
+  }
+
+  .BtnSignUp {
+    width: 100%;
+    left: 0;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+  .downinfo {
+    width: 100%;
+    position: static; 
+    padding-top: 20px;
+  }
+
+  .logo img {
+    height: 80px; 
+  }
 }
 

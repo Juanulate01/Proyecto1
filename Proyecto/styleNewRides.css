@@ -104,7 +104,7 @@ header {
   font-size: 16px;
   margin-right: 20px;
   cursor: pointer;
-  color: #6c757d;
+  color: #878787;
 }
 
 .topBtns input[type="text"] {
@@ -129,6 +129,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  margin-bottom: 5%;
 }
 
 nav {
@@ -283,11 +284,6 @@ form {
   margin: 0 5px;
 }
 
-a {
-  color: #6c757d;;
-  text-decoration: none;
-}
-
 .linksNav a {
   text-decoration: none;
   color: #6c757d;
@@ -297,20 +293,113 @@ a {
 .linksNav a:hover {
   color: #007bff;
 }
+div.btnGroup a{
+  color: white;
+}
 .downinfo {
   display: flex;
   align-items: center;
   width: 99.9%;
-  position: absolute;
+  position: sticky;
   bottom: 0%;
   color: #7e7e7e;
   flex-direction: column;
   background-color: #fff;
+  left: 0%;
 }
 .downinfo p {
   margin: 0%;
   margin-bottom: 10px;
 }
-div.btnGroup a{
-  color: white;
+a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+
+@media (max-width: 1024px) {
+  main {
+    width: 90%;
+    padding: 10px;
+  }
+
+  header {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .topBtns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBtn {
+    margin-bottom: 10px;
+    min-width: 80%;
+  }
+
+  .search-bar {
+    margin-bottom: 10px;
+  }
+
+  .dateInfo, .topInfo, .vehicleBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .dateInfo input, .dateInfo select,
+  .topInfo input, .topInfo select,
+  .vehicleBox input, .vehicleBox select {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .btnGroup {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .cancel-button, .create-button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .downinfo {
+    position: static;
+    width: 99%;
+    padding-top: 20px;
+  }
+
+  .linksNav {
+    padding: 10px 0;
+  }
+
+  .linksNav li {
+    margin: 0 2px;
+  }
+
+  .logo img {
+    height: 80px;
+}
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  hr {
+    width: 30%;
+  }
 }

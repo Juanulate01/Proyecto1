@@ -3,6 +3,19 @@ body {
   margin: 0;
   padding: 0;
 }
+.findSecction a{
+  color: white;
+  text-decoration: none;
+}
+a {
+  color: #6c757d;
+  text-decoration: none;
+}
+main a {
+  color: blue;
+  text-decoration: none;
+}
+
 main {
   padding: 20px;
   width: 60%;
@@ -226,7 +239,6 @@ td {
   text-align: left;
 }
 td:first-child {
-  /* primer td */
   display: flex;
   align-items: center;
 }
@@ -276,4 +288,150 @@ th {
 .downinfo p {
   margin: 0%;
   margin-bottom: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .container1 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .topBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navContainer {
+    flex-direction: column;
+  }
+
+  .navBtn {
+    min-width: auto;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .profile-menu {
+    margin-top: 10px;
+  }
+
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .topInfo,
+  .dateInfo,
+  .vehicleBox {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .days {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .days label {
+    margin-bottom: 5px;
+  }
+
+  .btnGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cancel-button,
+  .create-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .downinfo {
+    position: static;
+    width: 99%;
+    padding-top: 20px;
+  }
+
+  .linksNav {
+    padding: 10px 0;
+  }
+
+  .linksNav li {
+    margin: 0 2px;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+
+  #make, #model {
+    display: none;
+  }
+
+
+  .btnFindR {
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    width: fit-content;
+  }
+
+  table tr th:nth-child(1),
+  table tr td:nth-child(1),
+  table tr th:nth-child(5),
+  table tr td:nth-child(5) {
+    display: none;
+  }
+
+
+  table {
+    width: 100%; 
+    font-size: 14px; 
+  }
+
+
+  table th, 
+  table td {
+    padding: 8px; 
+    text-align: center; 
+  }
+
+
+  table th:nth-child(2), 
+  table td:nth-child(2) {
+    width: 30%;
+  }
+  
+  table th:nth-child(3), 
+  table td:nth-child(3) {
+    width: 30%; 
+  }
+  
+  table th:nth-child(4), 
+  table td:nth-child(4) {
+    width: 20%; 
+  }
+
+  table th:nth-child(6), 
+  table td:nth-child(6) {
+    width: 20%; 
+  }
 }

@@ -1,6 +1,6 @@
 document.getElementById('signUpBtn').addEventListener('click', function(event) {
   event.preventDefault();
-
+  //Extrae la info de los campos
   const firstName = document.getElementById('firstName').value.trim();
   const lastName = document.getElementById('lastName').value.trim();
   const email = document.getElementById('email').value.trim();
@@ -12,13 +12,23 @@ document.getElementById('signUpBtn').addEventListener('click', function(event) {
   const city = document.getElementById('city').value.trim();
   const phoneNumber = document.getElementById('phoneNumber').value.trim();
 
+  //Valida que los todos los campos esten llenos
   if (!firstName || !lastName || !email || !password || !repeatPassword || !address || !country || !state || !city || !phoneNumber) {
-    alert('Por favor llene todos los campos');
+    alert('Please fill in all fields');
     return;
   }
-
+  //Valida que los password sean iguales
   if (password !== repeatPassword) {
-    alert('Las contraseñas no coinciden');
+    alert('Passwords do not match');
+    return;
+  }
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+  
+  // valida si el correo no existe
+  const existingUser = users.find(user => user.email === email);
+  
+  if (existingUser) {
+    alert('This email is already registered.');
     return;
   }
 
@@ -32,10 +42,10 @@ document.getElementById('signUpBtn').addEventListener('click', function(event) {
     state,
     city,
     phoneNumber,
-    userType: 'pasajero' //Agrega el pasagero automaticamente
+    userType: 'pasajero',
+    usStatus: 'inactivo' 
   };
 
-  let users = JSON.parse(localStorage.getItem('users')) || [];
   users.push(user);
   localStorage.setItem('users', JSON.stringify(users));
 

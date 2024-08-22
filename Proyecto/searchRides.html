@@ -31,8 +31,8 @@
             <div class="profile-menu">
               <button type="button" class="profile-icon"></button>
               <div class="dropdown-menu">
-                <a href="/Proyecto/index.html">Logout</a>
-                <a href="/Proyecto/editProf.html">Settings</a>
+                <a id="logout" href="/Proyecto/index.html">Logout</a>
+                <a id="settings">Settings</a>
               </div>
             </div>
           </nav>
@@ -48,33 +48,33 @@
             <div class="locationBox">
               <div class="boxGroup">
                 <label for="from">From</label>
-                <select id="from">
-                  <option value="Quesada">Quesada</option>
+                <select id="selectFrom">
+                  <option value="Quesada">---</option>
                 </select>
               </div>
               <div class="boxGroup">
                 <label for="to">To</label>
-                <select id="to">
-                  <option value="Zarcero">Zarcero</option>
+                <select id="selectTo">
+                  <option value="Zarcero">---</option>
                 </select>
               </div>
             </div>
-            <div class="boxGroup days">
+            <div id="selecDays" class="boxGroup days">
               <label>Days</label>
-              <label><input type="checkbox" checked> Mon</label>
-              <label><input type="checkbox" checked> Tue</label>
-              <label><input type="checkbox" checked> Wed</label>
-              <label><input type="checkbox" checked> Thu</label>
-              <label><input type="checkbox" checked> Fri</label>
-              <label><input type="checkbox" checked> Sat</label>
-              <label><input type="checkbox" checked> Sun</label>
+              <label><input type="checkbox"> Mon</label>
+              <label><input type="checkbox"> Tue</label>
+              <label><input type="checkbox"> Wed</label>
+              <label><input type="checkbox"> Thu</label>
+              <label><input type="checkbox"> Fri</label>
+              <label><input type="checkbox"> Sat</label>
+              <label><input type="checkbox"> Sun</label>
             </div>
           </div>
-          <button class="btnFindR"><a href="/Proyecto/bookings.html">Find Rides</a></button>
+          <button id="fndRides" class="btnFindR">Find Rides</button>
         </div>
         <div class="tblResult">
           <div style="padding-bottom: 2%">
-            <label>Rides found from <span class="bold">Quesada</span> to <span class="bold">Zarcero</span></label>
+            <label>Rides found from <span id="showFrom" class="bold">---</span> to <span id="showTo" class="bold">---</span></label>
           </div>
           <table>
             <thead>
@@ -143,6 +143,7 @@
         <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
       </footer>
     </div>
+    <script src="/Proyecto/Javascripts/searchRides.js"></script>
   </body>
 </html>
 

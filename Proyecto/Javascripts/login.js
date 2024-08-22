@@ -1,22 +1,27 @@
 document.querySelector('.buttonLogin').addEventListener('click', function(event) {
   event.preventDefault();
 
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
 
   let users = JSON.parse(localStorage.getItem('users')) || [];
 
-  let validUser = users.find(user => user.email === username && user.password === password);
+  let validUserIndex = users.findIndex(user => user.email === username && user.password === password);
 
-  if (validUser) {
-    alert("Login exitoso!");
+  if (validUserIndex !== -1) {
+    // Cambia el usStatus a "Activo"
+    users[validUserIndex].usStatus = 'Activo';
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert("Login successful!");
+
     // Validar el tipo de usuario
-    if (validUser.userType === 'pasajero') {
+    if (users[validUserIndex].userType === 'pasajero') {
       window.location.href = '/Proyecto/searchRides.html';
-    } else if (validUser.userType === 'chofer') {
-      window.location.href = '/Proyecto/bookings.html';
+    } else if (users[validUserIndex].userType === 'chofer') {
+      window.location.href = '/Proyecto/myRides.html';
     }
   } else {
-    alert("Nombre de usuario o contraseña incorrectos.");
+    alert("Incorrect username or password.");
   }
 });

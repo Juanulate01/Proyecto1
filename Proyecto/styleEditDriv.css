@@ -97,7 +97,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .dropdown-menu a {
   display: block;
   padding: 10px;
@@ -109,7 +108,7 @@ body {
   background-color: #f4f4f4;
 }
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
   unicode-bidi: isolate;
   color: #878787;
@@ -117,11 +116,11 @@ h1 {
   font-size: 2em;
   font-weight: bold;
   unicode-bidi: isolate;
-  margin: 0%;
+  margin-top: 5%;
   text-align: center;
 }
 hr {
-  width: 17%;
+  width: 30%;
 }
 nav {
   display: flex;
@@ -151,67 +150,72 @@ nav ul li a.active {
   background-color: #007bff;
   color: #fff;
 }
-main {
+.registrbox {
+  background-color: #fff;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 60%;
+  border-radius: 5px;
+  width: 500px;
 }
 
-.table-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.table-container table {
-  width: 100%;
+.registrbox h2 {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin-top: 20px;
+.group {
+  display: flex;
+  flex-wrap: wrap; /* Los elementos se envuelven */
+  margin-bottom: 15px;
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
+.group label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-th,
-td {
-  padding: 12px;
-  text-align: center;
-  width: 30%;
-  height: 60px;
+.group input,
+.group select {
+  width: calc(
+    100% - 22px
+  ); /* Ancho del campo de entrada, restando padding y bordes */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-th {
-  background-color: #f2f2f2;
+.column {
+  flex: 1; /* Ocupa igual espacio que otros elementos con flex: 1 */
+  margin-right: 10px; /* Espacio a la derecha de cada columna */
 }
 
-td img {
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.column:last-child {
+  margin-right: 0; /* Elimina el margen derecho */
+}
+.cancel-button,
+.create-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  width: 200px;
+}
+
+.cancel-button {
+  background-color: #ccc;
   margin-right: 10px;
 }
 
-a {
-  color: #6c757d;
-  text-decoration: none;
+.create-button {
+  background-color: #007bff;
+  color: #fff;
 }
-main a{
-  color: blue;
-}
-
-a:hover {
-  text-decoration: underline;
+.btnGroup {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  margin-top: 6%;
 }
 .linksNav {
   list-style: none;
@@ -239,7 +243,7 @@ a:hover {
   display: flex;
   align-items: center;
   width: 99.9%;
-  position: absolute;
+  position: relative;
   bottom: 0%;
   color: #7e7e7e;
   flex-direction: column;
@@ -249,88 +253,85 @@ a:hover {
   margin: 0%;
   margin-bottom: 10px;
 }
+a {
+  color: #6c757d;
+  text-decoration: none;
+}
+.btnGroup a{
+  color: white;
+}
+
 @media (max-width: 1024px) {
-  .container1 {
-    width: 100%;
+  .registrbox {
+    width: 90%;
     padding: 10px;
   }
 
-  .logo img {
-    height: 80px;
+  .group {
+    flex-direction: column; 
   }
 
-  header {
+  .column {
     width: 100%;
-    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 10px; 
   }
 
-  .topBtns {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
+  .Title1 h1.header {
+    font-size: 28px;
   }
 
-  .navContainer {
-    flex-direction: column;
+  .line {
+    width: 70%;
+  }
+
+  .BtnSignUp {
     width: 100%;
-    align-items: center;
-  }
-
-  .navBtn {
-    width: 100%;
-    margin: 5px 0;
-    text-align: center;
-  }
-
-  .search-bar {
-    width: 100%;
+    left: 0;
+    height: 45px;
     margin: 10px 0;
-  }
-
-  .profile-menu {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  main {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .table-container {
-    width: 100%;
-  }
-
-  table {
-    width: 100%;
   }
 
   .downinfo {
     width: 100%;
-    position: static;
-    padding-top: 40%;
+    position: static; 
+    padding-top: 20px;
   }
 
-  .linksNav {
-    padding: 10px 0;
+  .logo img {
+    height: 80px; 
+  }
+  .topBtns {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .linksNav li {
-    display: inline;
-    margin: 0 5px;
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
   }
 
-  footer p {
-    text-align: center;
+  .navBtn {
+    margin-bottom: 10px;
+    min-width: 80%;
+  }
+
+  .search-bar {
     margin-bottom: 10px;
   }
 
-  h1 {
-    font-size: 1.5em;
+  .dateInfo, .topInfo, .vehicleBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
-  hr {
-    width: 30%;
+  .dateInfo input, .dateInfo select,
+  .topInfo input, .topInfo select,
+  .vehicleBox input, .vehicleBox select {
+    width: 90%;
+    margin-bottom: 10px;
   }
+
 }
+

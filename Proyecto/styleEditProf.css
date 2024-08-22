@@ -164,7 +164,7 @@ nav ul li a.active {
 
 .group {
   display: flex;
-  flex-wrap: wrap; /* Los elementos se envuelven */
+  flex-wrap: wrap; 
   margin-bottom: 15px;
 }
 
@@ -177,19 +177,19 @@ nav ul li a.active {
 .group select {
   width: calc(
     100% - 22px
-  ); /* Ancho del campo de entrada, restando padding y bordes */
+  ); 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 .column {
-  flex: 1; /* Ocupa igual espacio que otros elementos con flex: 1 */
-  margin-right: 10px; /* Espacio a la derecha de cada columna */
+  flex: 1; 
+  margin-right: 10px; 
 }
 
 .column:last-child {
-  margin-right: 0; /* Elimina el margen derecho */
+  margin-right: 0; 
 }
 .cancel-button,
 .create-button {
@@ -257,3 +257,81 @@ a {
   color: #6c757d;
   text-decoration: none;
 }
+.btnGroup a{
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .registrbox {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .group {
+    flex-direction: column; 
+  }
+
+  .column {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+
+  .Title1 h1.header {
+    font-size: 28px;
+  }
+
+  .line {
+    width: 70%;
+  }
+
+  .BtnSignUp {
+    width: 100%;
+    left: 0;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+  .downinfo {
+    width: 100%;
+    position: static; 
+    padding-top: 20px;
+  }
+
+  .logo img {
+    height: 80px; 
+  }
+  .topBtns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBtn {
+    margin-bottom: 10px;
+    min-width: 80%;
+  }
+
+  .search-bar {
+    margin-bottom: 10px;
+  }
+
+  .dateInfo, .topInfo, .vehicleBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .dateInfo input, .dateInfo select,
+  .topInfo input, .topInfo select,
+  .vehicleBox input, .vehicleBox select {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+}
+

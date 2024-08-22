@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookings</title>
+    <title>Proyecto</title>
     <link rel="stylesheet" href="styleEditProf.css">
   </head>
-  <body>
+  <body onload="loadUserForEdit()">
     <div class="container1">
       <div class="logo">
         <img src="Imagenes/Logo.png" alt="logo" height="100">
@@ -31,8 +31,8 @@
             <div class="profile-menu">
               <button type="button" class="profile-icon"></button>
               <div class="dropdown-menu">
-                <a href="/Proyecto/index.html">Logout</a>
-                <a href="/Proyecto/editProf.html">Settings</a>
+                <a id="logout" href="/Proyecto/index.html">Logout</a>
+                <a id="settings">Settings</a>
               </div>
             </div>
           </nav>
@@ -48,30 +48,30 @@
             <div class="group">
               <div class="column">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName"  value="Bladimir" required>
+                <input type="text" id="firstName" required>
               </div>
               <div class="column">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName"  value="Arroyo" required>
+                <input type="text" id="lastName" required>
               </div>
             </div>
             <div class="group">
               <label for="email">Email</label>
-              <input type="email" id="email" value="Bladimir.ab@gmail.com" required>
+              <input type="email" id="email" required>
             </div>
             <div class="group">
               <div class="column">
-                <label for="password">Password</label>
-                <input type="text" id="password" required value="8544211">
+                <label for="password">Old Password</label>
+                <input type="password" id="password" required>
               </div>
               <div class="column">
-                <label for="repeatPassword">Repeat Password</label>
+                <label for="repeatPassword">New Password</label>
                 <input type="password" id="repeatPassword" required>
               </div>
             </div>
             <div class="group">
               <label for="address">Address</label>
-              <input type="text" id="address"  value="2km Norte">
+              <input type="text" id="address">
             </div>
             <div class="group">
               <div class="column">
@@ -80,27 +80,28 @@
                   <option value="">Select Country</option>
                   <option value="cr">Costa Rica</option>
                   <option value="us">United States</option>
-                  <option value="mx">Mexico</option>
+                  <option value="br">Brazil</option>
+                  <option value="es">España</option>
                 </select>
               </div>
               <div class="column">
                 <label for="state">State</label>
-                <input type="text" id="state" value="Alajuela">
+                <input type="text" id="state">
               </div>
             </div>
             <div class="group">
               <div class="column">
                 <label for="city">City</label>
-                <input type="text" id="city" value="Quesada">
+                <input type="text" id="city">
               </div>
               <div class="column">
                 <label for="phoneNumber">Phone Number</label>
-                <input type="text" id="phoneNumber" value="8888888">
+                <input type="text" id="phoneNumber">
               </div>
             </div>
             <div class="btnGroup">
-              <button type="button" class="cancel-button"><a href="/Proyecto/myRides.html">Cancel</a></li></button>
-              <button type="submit" class="create-button"><a href="/Proyecto/reqRides.html">Save</a></button>
+              <button type="button" id="cancelBtn" class="cancel-button">Cancel</button>
+              <button type="submit" id="editBtn" class="create-button">Save</button>
             </div>
           </form>
         </div>
@@ -125,6 +126,7 @@
         <p>&copy; <a href="/Proyecto/index.html">Aventones.com</a></p>
       </footer>
     </div>
+    <script src="/Proyecto/Javascripts/editProf.js"></script>
   </body>
 </html>
 

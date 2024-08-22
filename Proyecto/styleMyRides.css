@@ -247,3 +247,82 @@ input {
   margin: 0%;
   margin-bottom: 10px;
 }
+maina {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .container1 {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  header {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .topBtns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navBtn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .profile-menu {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .new-ride {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .downinfo {
+    position: static;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .linksNav {
+    padding: 10px 0;
+  }
+
+  .linksNav li {
+    margin: 0 2px;
+  }
+}

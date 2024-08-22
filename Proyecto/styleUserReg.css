@@ -28,7 +28,7 @@ body {
 
 .group {
   display: flex;
-  flex-wrap: wrap; /* Los elementos se envuelven */
+  flex-wrap: wrap; 
   margin-bottom: 15px;
 }
 
@@ -41,35 +41,35 @@ body {
 .group select {
   width: calc(
     100% - 22px
-  ); /* Ancho del campo de entrada, restando padding y bordes */
+  ); 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 .column {
-  flex: 1; /* Ocupa igual espacio que otros elementos con flex: 1 */
-  margin-right: 10px; /* Espacio a la derecha de cada columna */
+  flex: 1; 
+  margin-right: 10px; 
 }
 
 .column:last-child {
-  margin-right: 0; /* Elimina el margen derecho */
+  margin-right: 0;
 }
 
 .links {
   display: flex;
-  justify-content: space-between; /* Espacio entre links */
-  margin-bottom: 20px; /* Espacio debajo de los links */
+  justify-content: space-between; 
+  margin-bottom: 20px; 
 }
 
 .links a {
-  text-decoration: none; /* quita el subrayado de los links */
-  color: #007bff; /* pone los links azules */
+  text-decoration: none; 
+  color: #007bff; 
   text-align: left;
 }
 
 .links a:hover {
-  text-decoration: underline; /* Subraya el enlace al pasar mouse */
+  text-decoration: underline; 
 }
 
 .BtnSignUp {
@@ -155,49 +155,44 @@ body {
   border-top: 1px solid #ccc;
 }
 
-@media (min-width: 431px) {
-  body {
-    flex-direction: row;
-  }
-
+@media (max-width: 1024px) {
   .registrbox {
-    width: 500px;
+    width: 90%;
+    padding: 10px;
   }
 
   .group {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; 
   }
 
   .column {
-    flex: 1;
-    margin-right: 10px;
-  }
-
-  .column:last-child {
+    width: 100%;
     margin-right: 0;
+    margin-bottom: 10px; 
   }
 
-  .links {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .BtnSignUp {
-    width: 200px;
-    align-self: center;
-  }
-
-  .Title1 .header {
-    font-size: 36px;
+  .Title1 h1.header {
+    font-size: 28px;
   }
 
   .line {
-    width: 50%;
+    width: 70%;
+  }
+
+  .BtnSignUp {
+    width: 100%;
+    left: 0;
+    height: 45px;
+    margin: 10px 0;
   }
 
   .downinfo {
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    position: static; 
+    padding-top: 20px;
+  }
+
+  .logo img {
+    height: 80px; 
   }
 }
