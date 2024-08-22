@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
           homeLink.style.cursor = 'default';
         }
       }
-  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const createBtn = document.getElementById('createBtn');
   const cancelBtn = document.getElementById('cancelBtn');
@@ -62,12 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('newrides', JSON.stringify(currentRides));
 
       alert("Ride creation successful!");
-      window.location.href = '/Proyecto/searchRides.html';
+      window.location.href = '/Proyecto/myRides.html';
   });
 
   cancelBtn.addEventListener('click', () => {
-      document.querySelector('form').reset();
-      window.location.href = '/Proyecto/searchRides.html';
+      window.location.href = '/Proyecto/myRides.html';
   });
 
 });

@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
         alert("No active user found.");
     }
 });
+document.getElementById('cancelBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const cancelBtn = document.getElementById('cancelBtn');
+    cancelBtn.addEventListener('click', () => {
+        window.location.href = '/Proyecto/myRides.html';
+    });
+
+});
+
 
 // Maneja la edición del usuario
 document.getElementById('editBtn').addEventListener('click', function(event) {

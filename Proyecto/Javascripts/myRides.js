@@ -29,10 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
   tableBody.innerHTML = '';
 
   // Filtrar los viajes que corresponden al usuario activo
-  const filteredRides = rides.filter(ride => ride.userName === activeUsername);
+  const filteredRides = rides.map((ride, index) => ({ ...ride, originalIndex: index }))
+                            .filter(ride => ride.userName === activeUsername);
 
   // Agrega cada viaje a la tabla
-  filteredRides.forEach((ride, index) => {
+  filteredRides.forEach((ride) => {
     const row = document.createElement('tr');
     
     // Crea celdas
@@ -53,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const actionsCell = document.createElement('td');
     actionsCell.innerHTML = `
-      <a href="#" class="edit-link" data-index="${index}">Edit</a> |
-      <a href="#" class="delete-link" data-index="${index}">Delete</a>
+      <a href="#" class="edit-link" data-index="${ride.originalIndex}">Edit</a> |
+      <a href="#" class="delete-link" data-index="${ride.originalIndex}">Delete</a>
     `;
     
     // Agrega las celdas a la fila
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const rideIndex = this.dataset.index;
       
       // Guarda la información del viaje a editar
-      const rideToEdit = filteredRides[rideIndex];
+      const rideToEdit = rides[rideIndex];
       localStorage.setItem('rideToEdit', JSON.stringify(rideToEdit));
       window.location.href = '/Proyecto/editRides.html';
     });
@@ -94,52 +95,48 @@ document.addEventListener('DOMContentLoaded', () => {
         rides.splice(rideIndex, 1);
         localStorage.setItem('newrides', JSON.stringify(rides));
 
-        // Recargar la página para reflejar los cambios
+        // Recarga la página para reflejar los cambios
         window.location.reload();
       }
     });
   });
 });
-
-
-
-
-
 document.getElementById('logout').addEventListener('click', function() {
-    let users = JSON.parse(localStorage.getItem('users'));
-  
-    if (users && users.length > 0) {
-        let activeUserIndex = users.findIndex(user => user.usStatus === 'Activo');
-        if (activeUserIndex !== -1) {
-            users[activeUserIndex].usStatus = 'Inactivo';
+  let users = JSON.parse(localStorage.getItem('users'));
 
-            localStorage.setItem('users', JSON.stringify(users));
-            alert("Logout successful!");
-            window.location.href = "/Proyecto/index.html";
-        }
-    }
+  if (users && users.length > 0) {
+      let activeUserIndex = users.findIndex(user => user.usStatus === 'Activo');
+
+      if (activeUserIndex !== -1) {
+          users[activeUserIndex].usStatus = 'Inactivo';
+
+          localStorage.setItem('users', JSON.stringify(users));
+          alert("Logout successful!");
+          window.location.href = "/Proyecto/index.html";
+      }
+  }
 });
-  
+
 document.getElementById('settings').addEventListener('click', function() {
-    let users = JSON.parse(localStorage.getItem('users'));
-  
-    if (users && users.length > 0) {
-        // Encontrar el usuario activo
-        let activeUserIndex = users.findIndex(user => user.usStatus === 'Activo');
-        if (activeUserIndex !== -1) {
-            let userType = users[activeUserIndex].userType;
-  
-            if (userType === 'pasajero') {
-                window.location.href = '/Proyecto/editProf.html';
-            } else if (userType === 'chofer') {
-                window.location.href = '/Proyecto/editDriver.html';
-            }
-        } else {
-            alert("There are no active users.");
-            window.location.href = '/Proyecto/index.html';
-        }
-    } else {
-        alert("There are no registered users.");
-        window.location.href = '/Proyecto/index.html';
-    }
+  let users = JSON.parse(localStorage.getItem('users'));
+
+  if (users && users.length > 0) {
+      let activeUserIndex = users.findIndex(user => user.usStatus === 'Activo');
+
+      if (activeUserIndex !== -1) {
+          let userType = users[activeUserIndex].userType;
+
+          if (userType === 'pasajero') {
+              window.location.href = '/Proyecto/editProf.html';
+          } else if (userType === 'chofer') {
+              window.location.href = '/Proyecto/editDriver.html';
+          }
+      } else {
+          alert("There are no active users.");
+          window.location.href = '/Proyecto/index.html';
+      }
+  } else {
+      alert("There are no registered users.");
+      window.location.href = '/Proyecto/index.html';
+  }
 });
